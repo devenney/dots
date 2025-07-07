@@ -1,0 +1,27 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="spaceship"
+
+plugins=(git zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+##
+# User configuration
+##
+
+# Autosuggest settings
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# goenv
+if command -v goenv >/dev/null 2>&1; then
+	export GOENV_ROOT="$HOME/.goenv"
+	export PATH="$GOENV_ROOT/bin:$PATH"
+	eval "$(goenv init -)"
+else
+	echo "Warning: goenv not found in PATH"
+fi
