@@ -2,27 +2,32 @@ vim.g.mapleader = ","
 
 require("config.lazy")
 
+--- Theme ---
+vim.opt.termguicolors = true
+
 --- Indentation ---
 vim.o.tabstop = 4
 vim.o.expandtab = false
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
+vim.o.colorcolumn = "80"
+
 --- Hard Mode ---
-vim.keymap.set("i", "<Up>", ":echoe 'LOL'<CR>")
-vim.keymap.set("i", "<Down>", ":echoe 'LOL'<CR>")
-vim.keymap.set("i", "<Left>", ":echoe 'LOL'<CR>")
-vim.keymap.set("i", "<Right>", ":echoe 'LOL'<CR>")
+vim.keymap.set("i", "<Up>", "<C-o>:echoe 'LOL'<CR>")
+vim.keymap.set("i", "<Down>", "<C-o>:echoe 'LOL'<CR>")
+vim.keymap.set("i", "<Left>", "<C-o>:echoe 'LOL'<CR>")
+vim.keymap.set("i", "<Right>", "<C-o>:echoe 'LOL'<CR>")
 
 vim.keymap.set("n", "<Up>", ":echoe 'LOL'<CR>")
 vim.keymap.set("n", "<Down>", ":echoe 'LOL'<CR>")
 vim.keymap.set("n", "<Left>", ":echoe 'LOL'<CR>")
 vim.keymap.set("n", "<Right>", ":echoe 'LOL'<CR>")
 
-vim.keymap.set("v", "<Up>", ":echoe 'LOL'<CR>")
-vim.keymap.set("v", "<Down>", ":echoe 'LOL'<CR>")
-vim.keymap.set("v", "<Left>", ":echoe 'LOL'<CR>")
-vim.keymap.set("v", "<Right>", ":echoe 'LOL'<CR>")
+vim.keymap.set("v", "<Up>", "<C-u>:echoe 'LOL'<CR>")
+vim.keymap.set("v", "<Down>", "<C-u>:echoe 'LOL'<CR>")
+vim.keymap.set("v", "<Left>", "<C-u>:echoe 'LOL'<CR>")
+vim.keymap.set("v", "<Right>", "<C-u>:echoe 'LOL'<CR>")
 
 --- Telescope ---
 local builtin = require('telescope.builtin')
