@@ -1,21 +1,7 @@
-# tmux
-[".config/tmux/plugins/catppuccin/tmux"]
-	type = "archive"
-	url = "https://github.com/catppuccin/tmux/archive/master.tar.gz"
-	exact = true
-	stripComponents = 1
-	refreshPeriod = "24h"
-
-# oh-my-zsh
-[".oh-my-zsh/custom/themes/spaceship-prompt"]
-	type = "archive"
-	url = "https://github.com/spaceship-prompt/spaceship-prompt/archive/master.tar.gz"
-	exact = true
-	stripComponents = 1
-	refreshPeriod = "24h"
-[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
-	type = "archive"
-	url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
-	exact = true
-	stripComponents = 1
-	refreshPeriod = "24h"
+# zsh
+[".oh-my-zsh"]
+  type = "archive"
+  url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+  exact = true
+  stripComponents = 1
+  refreshPeriod = "24h"
