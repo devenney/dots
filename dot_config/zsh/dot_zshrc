@@ -10,7 +10,35 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
 antidote load
 
+# --- Keybindings ---
+bindkey -v
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# --- Aliases ---
+alias ls='ls --color'
+
+# --- Shell Integrations ---
+eval "$(fzf --zsh)"
+
+# --- History ---
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
 # --- Completions ---
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu no
+fpath=("${ZDOTDIR:-~}/completions" $fpath)
 autoload -U compinit
 compinit -u
 
