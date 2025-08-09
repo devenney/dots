@@ -1,4 +1,5 @@
 brew "fzf"
 brew "keychain"
+brew "llvm"
 brew "neovim"
 brew "zsh"
