@@ -1,2 +1,5 @@
 # --- SSH ---
 eval $(keychain --quiet --eval id_ed25519)
+
+# --- GPG ---
+export GPG_TTY=$(tty)
