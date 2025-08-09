@@ -10,7 +10,7 @@ config.font = wezterm.font("Dank Mono")
 config.color_scheme = "Catppuccin Mocha"
 
 -- Appearance
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
   left = 0,
