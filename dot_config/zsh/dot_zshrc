@@ -12,6 +12,12 @@ antidote load
 
 # --- Keybindings ---
 bindkey -v
+source ${ZDOTDIR:-~}/.zkbd.sh
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # break words on delimiters
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -35,6 +41,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # --- Completions ---
+setopt globdots
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
