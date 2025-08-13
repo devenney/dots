@@ -14,12 +14,10 @@ antidote load
 bindkey -v
 source ${ZDOTDIR:-~}/.zkbd.sh
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # break words on delimiters
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
-bindkey '^H' backward-kill-word
-bindkey '^[[3;5~' kill-word
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+bindkey '^[^?' backward-kill-word
+bindkey '^[d' kill-word
 
 # --- Aliases ---
 alias ls='ls --color'
