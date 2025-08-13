@@ -15,6 +15,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Line Numbering
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.scrolloff = 8
+
 -- Indentation
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
