@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   opts = {
-    ensure_installed = { "bash", "gitcommit", "gitignore", "lua", "markdown", "toml", "vim", "yaml" },
+    ensure_installed = { "bash", "gitcommit", "gitignore", "go", "gomod", "gosum", "gowork", "lua", "markdown", "toml", "vim", "yaml" },
     highlight = { enable = true },
     indent = { enable = true },
   },
