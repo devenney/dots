@@ -21,6 +21,7 @@ bindkey '^[d' kill-word
 
 # --- Aliases ---
 alias ls='ls --color'
+alias tmux='tmux -2'
 
 # --- Shell Integrations ---
 eval "$(fzf --zsh)"
