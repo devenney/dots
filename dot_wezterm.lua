@@ -2,8 +2,8 @@ local wezterm = require('wezterm')
 local config = wezterm.config_builder()
 
 -- Font settings
-config.font = wezterm.font 'Dank Mono'
-config.font_size = 15
+config.font = wezterm.font('Dank Mono', { weight = 'Bold' })
+config.font_size = 14
 config.freetype_load_flags = 'NO_HINTING'
 config.line_height = 1.2
 
@@ -37,7 +37,7 @@ config.keys = {
 }
 
 -- Miscellaneous
-config.max_fps = 120
 config.prefer_egl = true
+config.max_fps = 120
 
 return config
