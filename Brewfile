@@ -1,4 +1,5 @@
 brew "fzf"
+brew "goenv"
 brew "keychain"
 brew "llvm"
 brew "neovim"
