@@ -31,6 +31,9 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 map("n", "<leader>e", "<cmd>Ex<cr>")
 
+-- Imports
+require("config.autocmds")
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
